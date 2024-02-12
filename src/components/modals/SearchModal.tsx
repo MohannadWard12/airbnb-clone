@@ -33,6 +33,7 @@ const SearchModal = () => {
   const [bathroomCount, setBathRoomCount] = useState(1);
   const [dateRange, setDateRange] = useState<Range>({ startDate: new Date(), endDate: new Date(), key: "selection" });
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const Map = useMemo(() => dynamic(() => import("../Map"), { ssr: false }), [location]);
 
   const onBack = useCallback(() => {
